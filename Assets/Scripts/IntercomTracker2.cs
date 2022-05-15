@@ -32,7 +32,6 @@ public class IntercomTracker2 : MonoBehaviour
         if (DayTracker.currentDay == 2)
         {
             choiceTitle.GetComponent<Text>().text = "STOWAWAY";
-            ChoiceMenu.SetActive(true);
         }
 
         if (DayTracker.currentDay == 5)
@@ -45,7 +44,6 @@ public class IntercomTracker2 : MonoBehaviour
             {
                 choiceTitle.GetComponent<Text>().text = "DISPUTE";
             }
-            ChoiceMenu.SetActive(true);
         }
         if (DayTracker.currentDay == 7)
         {
@@ -65,8 +63,8 @@ public class IntercomTracker2 : MonoBehaviour
             {
                 choiceTitle.GetComponent<Text>().text = "COMPLAINT";
             }
-            ChoiceMenu.SetActive(true);
         }
+        ChoiceMenu.SetActive(true);
     }
 
     // FIRST CHOICE

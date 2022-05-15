@@ -129,7 +129,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16422
+  m_Name: pb_Mesh21024
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -688,7 +688,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16208
+  m_Name: pb_Mesh20810
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1513,7 +1513,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16434
+  m_Name: pb_Mesh21036
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1677,7 +1677,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16292
+  m_Name: pb_Mesh20884
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2154,7 +2154,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-30440
+  m_Name: pb_Mesh20924
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2318,7 +2318,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16350
+  m_Name: pb_Mesh20954
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2485,6 +2485,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 802841011}
+  - component: {fileID: 802841014}
+  - component: {fileID: 802841012}
+  - component: {fileID: 802841013}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2506,6 +2509,62 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &802841012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802841010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51e9136e22061054299d0130bdca38bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DayTracker: {fileID: 802841014}
+  ReportTracker: {fileID: 802841013}
+  choiceTitle: {fileID: 152087874}
+  intercomButton: {fileID: 1399403364}
+  ChoiceMenu: {fileID: 1015263492}
+  Stowaway: 0
+  Outbreak: 0
+  Dispute: 0
+  Sabotage: 0
+  Surgery: 0
+  Murdered: 0
+  Complaint: 0
+--- !u!114 &802841013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802841010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 054fbea83c2fa2f4791f54616fb5f9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DayTracker: {fileID: 802841014}
+  IntercomTracker: {fileID: 802841012}
+  reportSheet: {fileID: 1726866514}
+  reportText: {fileID: 219862202}
+--- !u!114 &802841014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802841010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03b64bb100428ab499b7561756a12dbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intercomTracker: {fileID: 802841012}
+  bedButton: {fileID: 1602573812}
+  dayText: {fileID: 194480265}
+  currentDay: 0
 --- !u!1 &827512968
 GameObject:
   m_ObjectHideFlags: 0
@@ -2631,7 +2690,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16262
+  m_Name: pb_Mesh20850
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3245,7 +3304,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1109142770}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 802841013}
+        m_TargetAssemblyTypeName: ReportTracker, Assembly-CSharp
+        m_MethodName: ReportSummon
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1109142770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3823,7 +3894,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1399403367}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 802841012}
+        m_TargetAssemblyTypeName: IntercomTracker2, Assembly-CSharp
+        m_MethodName: Choice
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1399403367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4415,7 +4498,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1602573815}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 802841014}
+        m_TargetAssemblyTypeName: DayTracker, Assembly-CSharp
+        m_MethodName: GoToSleep
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1602573815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4537,7 +4632,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 802841012}
         m_TargetAssemblyTypeName: IntercomTracker2, Assembly-CSharp
         m_MethodName: Eject
         m_Mode: 1
@@ -4549,7 +4644,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 802841012}
         m_TargetAssemblyTypeName: IntercomTracker2, Assembly-CSharp
         m_MethodName: Purge
         m_Mode: 1
@@ -4561,7 +4656,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 802841012}
         m_TargetAssemblyTypeName: IntercomTracker2, Assembly-CSharp
         m_MethodName: Workers
         m_Mode: 1
@@ -4573,7 +4668,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 802841012}
         m_TargetAssemblyTypeName: IntercomTracker2, Assembly-CSharp
         m_MethodName: Personnel
         m_Mode: 1
@@ -4585,7 +4680,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 802841012}
         m_TargetAssemblyTypeName: IntercomTracker2, Assembly-CSharp
         m_MethodName: Safe
         m_Mode: 1
@@ -4597,7 +4692,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 802841012}
         m_TargetAssemblyTypeName: IntercomTracker2, Assembly-CSharp
         m_MethodName: Blind
         m_Mode: 1
@@ -4609,7 +4704,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 802841012}
         m_TargetAssemblyTypeName: IntercomTracker2, Assembly-CSharp
         m_MethodName: Misplace
         m_Mode: 1
@@ -4742,7 +4837,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 802841013}
         m_TargetAssemblyTypeName: ReportTracker, Assembly-CSharp
         m_MethodName: CloseReport
         m_Mode: 1
@@ -5616,7 +5711,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 802841012}
         m_TargetAssemblyTypeName: IntercomTracker2, Assembly-CSharp
         m_MethodName: Confine
         m_Mode: 1
@@ -5628,7 +5723,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 802841012}
         m_TargetAssemblyTypeName: IntercomTracker2, Assembly-CSharp
         m_MethodName: Quarantine
         m_Mode: 1
@@ -5640,7 +5735,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 802841012}
         m_TargetAssemblyTypeName: IntercomTracker2, Assembly-CSharp
         m_MethodName: VIP
         m_Mode: 1
@@ -5652,7 +5747,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 802841012}
         m_TargetAssemblyTypeName: IntercomTracker2, Assembly-CSharp
         m_MethodName: Supply
         m_Mode: 1
@@ -5664,7 +5759,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 802841012}
         m_TargetAssemblyTypeName: IntercomTracker2, Assembly-CSharp
         m_MethodName: Risk
         m_Mode: 1
@@ -5676,7 +5771,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 802841012}
         m_TargetAssemblyTypeName: IntercomTracker2, Assembly-CSharp
         m_MethodName: Report
         m_Mode: 1
@@ -5688,7 +5783,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 802841012}
         m_TargetAssemblyTypeName: IntercomTracker2, Assembly-CSharp
         m_MethodName: Accept
         m_Mode: 1
@@ -6619,7 +6714,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -6906,7 +7001,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16456
+  m_Name: pb_Mesh21058
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
