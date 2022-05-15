@@ -346,7 +346,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -2524,6 +2524,9 @@ MonoBehaviour:
   DayTracker: {fileID: 802841014}
   ReportTracker: {fileID: 802841013}
   choiceTitle: {fileID: 152087874}
+  choiceText: {fileID: 117679826}
+  option1Text: {fileID: 474385703}
+  option2Text: {fileID: 455879919}
   intercomButton: {fileID: 1399403364}
   ChoiceMenu: {fileID: 1015263492}
   Stowaway: 0
@@ -2533,6 +2536,9 @@ MonoBehaviour:
   Surgery: 0
   Murdered: 0
   Complaint: 0
+  firstChoiceMade: 0
+  secondChoiceMade: 0
+  thirdChoiceMade: 0
 --- !u!114 &802841013
 MonoBehaviour:
   m_ObjectHideFlags: 0

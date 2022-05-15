@@ -98,18 +98,18 @@ public class ReportTracker : MonoBehaviour
                     }
                     if (IntercomTracker.Sabotage == false)
                     {
-                        reportText.GetComponent<Text>().text = "For Nothing at All Ending";
+                        reportText.GetComponent<Text>().text = "At What Cost Ending";
                     }
                 }
                 if (IntercomTracker.Outbreak == false)
                 {
                     if (IntercomTracker.Surgery == true)
                     {
-                        reportText.GetComponent<Text>().text = "The Last Step Ending";
+                        reportText.GetComponent<Text>().text = "Death on the Last Bend Ending";
                     }
                     if (IntercomTracker.Surgery == false)
                     {
-                        reportText.GetComponent<Text>().text = "Hardest Choices Ending";
+                        reportText.GetComponent<Text>().text = "Barely Perfect Ending";
                     }
                 }
             }
