@@ -10,6 +10,7 @@ public class ReportTracker : MonoBehaviour
 
     public GameObject reportSheet;
     public GameObject reportText;
+    public GameObject reportPersonal;
 
     public void Start()
     {
