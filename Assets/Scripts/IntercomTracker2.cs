@@ -73,7 +73,7 @@ public class IntercomTracker2 : MonoBehaviour
             if (Stowaway == false)
             {
                 choiceTitle.GetComponent<Text>().text = "DISPUTE";
-                choiceText.GetComponent<Text>().text = "Sir, the situation has developed. It appears the on going discourse between our VIP and the workers has reached a climax. The VIP has demanded you publically 'support' his position of power and repremand the workers for arguing against him. You know my feelings on the issue sir, but the choice remains yours. Who will you support?";
+                choiceText.GetComponent<Text>().text = "Sir, the situation has developed. It appears the on going discourse between our VIP and the workers has reached a climax. The VIP has demanded you publically 'support' his position of power and repremand the workers for arguing against him. I would weigh in with my own feelings sir, but the choice remains yours. Who will you support?";
                 option1Text.GetComponent<Text>().text = "Side with the VIP";
                 option2Text.GetComponent<Text>().text = "Side with the Workers";
             }

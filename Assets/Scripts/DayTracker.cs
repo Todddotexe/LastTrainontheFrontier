@@ -19,6 +19,11 @@ public class DayTracker : MonoBehaviour
         gameManager = GameObject.Find("ManagerObj").GetComponent<DayTracker>();
     }
 
+    private void Start()
+    {
+        bedButton.SetActive(false);
+    }
+
     public void GoToSleep()
     {
         currentDay++;
