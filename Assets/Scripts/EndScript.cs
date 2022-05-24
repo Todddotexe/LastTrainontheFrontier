@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EndScript : MonoBehaviour
 {
@@ -60,22 +61,30 @@ public class EndScript : MonoBehaviour
         if (IntercomTracker.Stowaway == false && IntercomTracker.Dispute == true && IntercomTracker.Murdered == true)
         {
             title.GetComponent<Text>().text = "Knives Out";
-            endText.GetComponent<Text>().text = "We've made it to the first checkpoint, but we still have miles of track to go. ";
+            endText.GetComponent<Text>().text = "We've made it to the first checkpoint, but we still have miles of track to go. Your adherence to your duty is admirable, but I fear you've neglected something equally important; your passangers. You've made your indifference to their grievences known. Be glad you don't have to leave the Engine Room, you have few friends beyond those doors.";
         }
         if (IntercomTracker.Stowaway == false && IntercomTracker.Dispute == true && IntercomTracker.Murdered == false)
         {
             title.GetComponent<Text>().text = "New Normal";
-            endText.GetComponent<Text>().text = "";
+            endText.GetComponent<Text>().text = "We've made it to the first checkpoint, but we still have miles of track to go. Isolated within this metal beast, our passangers took justice into their own hands, and got away with it. Perhaps it was the best decision to save your own skin, however I sense a change. Your word is no longer final.";
         }
         if (IntercomTracker.Stowaway == false && IntercomTracker.Dispute == false && IntercomTracker.Complaint == true)
         {
             title.GetComponent<Text>().text = "Uncertainty";
-            endText.GetComponent<Text>().text = "";
+            endText.GetComponent<Text>().text = "We've made it to the first checkpoint, but we still have miles of track to go. Unfortunately, you may not be Captain for all those miles. Your position is secure for now, but that report will have our employers reconsidering your aptitude. Whatever the case, we must push forward, its out of your hands now.";
         }
         if (IntercomTracker.Stowaway == false && IntercomTracker.Dispute == false && IntercomTracker.Complaint == false)
         {
             title.GetComponent<Text>().text = "Rivalry";
-            endText.GetComponent<Text>().text = "";
+            endText.GetComponent<Text>().text = "We've made it to the first checkpoint, but we still have miles of track to go. The train is safe, its passangers are happy. Everything is nearly perfect. But a single, powerful voice of doubt remains defiant. You are in control of this Train, but our VIP has sway in the world after this journey. Consider, will your journey end with the Train?";
         }
+    }
+    public void Menu()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

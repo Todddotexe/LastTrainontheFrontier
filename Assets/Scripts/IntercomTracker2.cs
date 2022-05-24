@@ -14,6 +14,7 @@ public class IntercomTracker2 : MonoBehaviour
     public GameObject option2Text;
 
     public GameObject intercomButton;
+    public GameObject intercomLight;
 
     public GameObject ChoiceMenu;
 
@@ -33,6 +34,7 @@ public class IntercomTracker2 : MonoBehaviour
     {
         ChoiceMenu.SetActive(false);
         intercomButton.SetActive(false);
+        intercomLight.SetActive(false);
     }
 
     public void Update()
@@ -40,14 +42,20 @@ public class IntercomTracker2 : MonoBehaviour
         if (DayTracker.currentDay == 2 && firstChoiceMade == false)
         {
             intercomButton.SetActive(true);
+            intercomLight.SetActive(true);
+            ReportTracker.reportLight.SetActive(false);
         }
         if (DayTracker.currentDay == 5 && secondChoiceMade == false)
         {
             intercomButton.SetActive(true);
+            intercomLight.SetActive(true);
+            ReportTracker.reportLight.SetActive(false);
         }
         if (DayTracker.currentDay == 7 && thirdChoiceMade == false)
         {
             intercomButton.SetActive(true);
+            intercomLight.SetActive(true);
+            ReportTracker.reportLight.SetActive(false);
         }
     }
 
@@ -121,6 +129,7 @@ public class IntercomTracker2 : MonoBehaviour
             DayTracker.bedButton.SetActive(true);
             ChoiceMenu.SetActive(false);
             intercomButton.SetActive(false);
+            intercomLight.SetActive(false);
             firstChoiceMade = true;
         }
     }
@@ -132,6 +141,7 @@ public class IntercomTracker2 : MonoBehaviour
             DayTracker.bedButton.SetActive(true);
             ChoiceMenu.SetActive(false);
             intercomButton.SetActive(false);
+            intercomLight.SetActive(false);
             firstChoiceMade = true;
         }
     }
@@ -145,6 +155,7 @@ public class IntercomTracker2 : MonoBehaviour
             DayTracker.bedButton.SetActive(true);
             ChoiceMenu.SetActive(false);
             intercomButton.SetActive(false);
+            intercomLight.SetActive(false);
             secondChoiceMade = true;
         }
     }
@@ -156,6 +167,7 @@ public class IntercomTracker2 : MonoBehaviour
             DayTracker.bedButton.SetActive(true);
             ChoiceMenu.SetActive(false);
             intercomButton.SetActive(false);
+            intercomLight.SetActive(false);
             secondChoiceMade = true;
         }
     }
@@ -167,6 +179,7 @@ public class IntercomTracker2 : MonoBehaviour
             DayTracker.bedButton.SetActive(true);
             ChoiceMenu.SetActive(false);
             intercomButton.SetActive(false);
+            intercomLight.SetActive(false);
             secondChoiceMade = true;
         }
     }
@@ -178,6 +191,7 @@ public class IntercomTracker2 : MonoBehaviour
             DayTracker.bedButton.SetActive(true);
             ChoiceMenu.SetActive(false);
             intercomButton.SetActive(false);
+            intercomLight.SetActive(false);
             secondChoiceMade = true;
         }
     }
@@ -191,6 +205,7 @@ public class IntercomTracker2 : MonoBehaviour
             DayTracker.bedButton.SetActive(true);
             ChoiceMenu.SetActive(false);
             intercomButton.SetActive(false);
+            intercomLight.SetActive(false);
             thirdChoiceMade = true;
         }
     }
@@ -202,6 +217,7 @@ public class IntercomTracker2 : MonoBehaviour
             DayTracker.bedButton.SetActive(true);
             ChoiceMenu.SetActive(false);
             intercomButton.SetActive(false);
+            intercomLight.SetActive(false);
             thirdChoiceMade = true;
         }
     }
@@ -213,6 +229,7 @@ public class IntercomTracker2 : MonoBehaviour
             DayTracker.bedButton.SetActive(true);
             ChoiceMenu.SetActive(false);
             intercomButton.SetActive(false);
+            intercomLight.SetActive(false);
             thirdChoiceMade = true;
         }
     }
@@ -224,6 +241,7 @@ public class IntercomTracker2 : MonoBehaviour
             DayTracker.bedButton.SetActive(true);
             ChoiceMenu.SetActive(false);
             intercomButton.SetActive(false);
+            intercomLight.SetActive(false);
             thirdChoiceMade = true;
         }
     }
@@ -235,6 +253,7 @@ public class IntercomTracker2 : MonoBehaviour
             DayTracker.bedButton.SetActive(true);
             ChoiceMenu.SetActive(false);
             intercomButton.SetActive(false);
+            intercomLight.SetActive(false);
             thirdChoiceMade = true;
         }
     }
@@ -246,6 +265,7 @@ public class IntercomTracker2 : MonoBehaviour
             DayTracker.bedButton.SetActive(true);
             ChoiceMenu.SetActive(false);
             intercomButton.SetActive(false);
+            intercomLight.SetActive(false);
             thirdChoiceMade = true;
         }
     }
@@ -257,6 +277,7 @@ public class IntercomTracker2 : MonoBehaviour
             DayTracker.bedButton.SetActive(true);
             ChoiceMenu.SetActive(false);
             intercomButton.SetActive(false);
+            intercomLight.SetActive(false);
             thirdChoiceMade = true;
         }
     }
@@ -268,6 +289,7 @@ public class IntercomTracker2 : MonoBehaviour
             DayTracker.bedButton.SetActive(true);
             ChoiceMenu.SetActive(false);
             intercomButton.SetActive(false);
+            intercomLight.SetActive(false);
             thirdChoiceMade = true;
         }
     }

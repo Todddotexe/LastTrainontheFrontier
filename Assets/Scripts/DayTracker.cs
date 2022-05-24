@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class DayTracker : MonoBehaviour
 {
     public IntercomTracker2 intercomTracker;
+    public ReportTracker reportTracker;
 
     DayTracker gameManager;
 
@@ -29,5 +30,6 @@ public class DayTracker : MonoBehaviour
         currentDay++;
         dayText.GetComponent<Text>().text = "Day:" + currentDay.ToString();
         bedButton.SetActive(false);
+        reportTracker.reportLight.SetActive(true);
     }
 }

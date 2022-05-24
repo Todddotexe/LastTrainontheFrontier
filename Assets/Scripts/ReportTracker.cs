@@ -12,6 +12,8 @@ public class ReportTracker : MonoBehaviour
     public GameObject reportText;
     public GameObject reportPersonal;
 
+    public GameObject reportLight;
+
     public GameObject tutorial;
 
     public void Start()
@@ -103,6 +105,7 @@ public class ReportTracker : MonoBehaviour
             reportPersonal.GetComponent<Text>().text = " ";
         }
         reportSheet.SetActive(true);
+        reportLight.SetActive(false);
     }
     #endregion
 
