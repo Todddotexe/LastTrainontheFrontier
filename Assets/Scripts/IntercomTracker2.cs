@@ -67,6 +67,7 @@ public class IntercomTracker2 : MonoBehaviour
             choiceText.GetComponent<Text>().text = "Sir, A stowaway has been found hiding in the supply carraige. He claims to be the brother of one of the staff members aboard. The passangers are divided about what to do with him, but the choice is yours. The supply carraige doesn't have the same protection as the personnel carriages, so theres no knowing if this stowaway has contracted any number of the strange illnesses that plauge the frontier. What are your orders?";
             option1Text.GetComponent<Text>().text = "Confine in a Personnel Carraige";
             option2Text.GetComponent<Text>().text = "Eject from the Train";
+            firstChoiceMade = true;
         }
 
         if (DayTracker.currentDay == 5)
@@ -85,6 +86,7 @@ public class IntercomTracker2 : MonoBehaviour
                 option1Text.GetComponent<Text>().text = "Side with the VIP";
                 option2Text.GetComponent<Text>().text = "Side with the Workers";
             }
+            secondChoiceMade = true;
         }
         if (DayTracker.currentDay == 7)
         {
@@ -116,8 +118,10 @@ public class IntercomTracker2 : MonoBehaviour
                 option1Text.GetComponent<Text>().text = "Accept the Report";
                 option2Text.GetComponent<Text>().text = "Misplace the Complaint";
             }
+            thirdChoiceMade = true;
         }
         ChoiceMenu.SetActive(true);
+        intercomLight.SetActive(false);
     }
 
     // FIRST CHOICE
@@ -129,8 +133,7 @@ public class IntercomTracker2 : MonoBehaviour
             DayTracker.bedButton.SetActive(true);
             ChoiceMenu.SetActive(false);
             intercomButton.SetActive(false);
-            intercomLight.SetActive(false);
-            firstChoiceMade = true;
+            FindObjectOfType<AudioManager>().Play("IntercomMenuClose");
         }
     }
     public void Eject()
@@ -141,8 +144,7 @@ public class IntercomTracker2 : MonoBehaviour
             DayTracker.bedButton.SetActive(true);
             ChoiceMenu.SetActive(false);
             intercomButton.SetActive(false);
-            intercomLight.SetActive(false);
-            firstChoiceMade = true;
+            FindObjectOfType<AudioManager>().Play("IntercomMenuClose");
         }
     }
     
@@ -155,8 +157,7 @@ public class IntercomTracker2 : MonoBehaviour
             DayTracker.bedButton.SetActive(true);
             ChoiceMenu.SetActive(false);
             intercomButton.SetActive(false);
-            intercomLight.SetActive(false);
-            secondChoiceMade = true;
+            FindObjectOfType<AudioManager>().Play("IntercomMenuClose");
         }
     }
     public void Purge()
@@ -167,8 +168,7 @@ public class IntercomTracker2 : MonoBehaviour
             DayTracker.bedButton.SetActive(true);
             ChoiceMenu.SetActive(false);
             intercomButton.SetActive(false);
-            intercomLight.SetActive(false);
-            secondChoiceMade = true;
+            FindObjectOfType<AudioManager>().Play("IntercomMenuClose");
         }
     }
     public void VIP()
@@ -179,8 +179,7 @@ public class IntercomTracker2 : MonoBehaviour
             DayTracker.bedButton.SetActive(true);
             ChoiceMenu.SetActive(false);
             intercomButton.SetActive(false);
-            intercomLight.SetActive(false);
-            secondChoiceMade = true;
+            FindObjectOfType<AudioManager>().Play("IntercomMenuClose");
         }
     }
     public void Workers()
@@ -191,8 +190,7 @@ public class IntercomTracker2 : MonoBehaviour
             DayTracker.bedButton.SetActive(true);
             ChoiceMenu.SetActive(false);
             intercomButton.SetActive(false);
-            intercomLight.SetActive(false);
-            secondChoiceMade = true;
+            FindObjectOfType<AudioManager>().Play("IntercomMenuClose");
         }
     }
 
@@ -205,8 +203,7 @@ public class IntercomTracker2 : MonoBehaviour
             DayTracker.bedButton.SetActive(true);
             ChoiceMenu.SetActive(false);
             intercomButton.SetActive(false);
-            intercomLight.SetActive(false);
-            thirdChoiceMade = true;
+            FindObjectOfType<AudioManager>().Play("IntercomMenuClose");
         }
     }
     public void Personnel()
@@ -217,8 +214,7 @@ public class IntercomTracker2 : MonoBehaviour
             DayTracker.bedButton.SetActive(true);
             ChoiceMenu.SetActive(false);
             intercomButton.SetActive(false);
-            intercomLight.SetActive(false);
-            thirdChoiceMade = true;
+            FindObjectOfType<AudioManager>().Play("IntercomMenuClose");
         }
     }
     public void Risk()
@@ -229,8 +225,7 @@ public class IntercomTracker2 : MonoBehaviour
             DayTracker.bedButton.SetActive(true);
             ChoiceMenu.SetActive(false);
             intercomButton.SetActive(false);
-            intercomLight.SetActive(false);
-            thirdChoiceMade = true;
+            FindObjectOfType<AudioManager>().Play("IntercomMenuClose");
         }
     }
     public void Safe()
@@ -241,8 +236,7 @@ public class IntercomTracker2 : MonoBehaviour
             DayTracker.bedButton.SetActive(true);
             ChoiceMenu.SetActive(false);
             intercomButton.SetActive(false);
-            intercomLight.SetActive(false);
-            thirdChoiceMade = true;
+            FindObjectOfType<AudioManager>().Play("IntercomMenuClose");
         }
     }
     public void Report()
@@ -253,8 +247,7 @@ public class IntercomTracker2 : MonoBehaviour
             DayTracker.bedButton.SetActive(true);
             ChoiceMenu.SetActive(false);
             intercomButton.SetActive(false);
-            intercomLight.SetActive(false);
-            thirdChoiceMade = true;
+            FindObjectOfType<AudioManager>().Play("IntercomMenuClose");
         }
     }
     public void Blind()
@@ -265,8 +258,7 @@ public class IntercomTracker2 : MonoBehaviour
             DayTracker.bedButton.SetActive(true);
             ChoiceMenu.SetActive(false);
             intercomButton.SetActive(false);
-            intercomLight.SetActive(false);
-            thirdChoiceMade = true;
+            FindObjectOfType<AudioManager>().Play("IntercomMenuClose");
         }
     }
     public void Accept()
@@ -277,8 +269,7 @@ public class IntercomTracker2 : MonoBehaviour
             DayTracker.bedButton.SetActive(true);
             ChoiceMenu.SetActive(false);
             intercomButton.SetActive(false);
-            intercomLight.SetActive(false);
-            thirdChoiceMade = true;
+            FindObjectOfType<AudioManager>().Play("IntercomMenuClose");
         }
     }
     public void Misplace()
@@ -289,9 +280,7 @@ public class IntercomTracker2 : MonoBehaviour
             DayTracker.bedButton.SetActive(true);
             ChoiceMenu.SetActive(false);
             intercomButton.SetActive(false);
-            intercomLight.SetActive(false);
-            thirdChoiceMade = true;
+            FindObjectOfType<AudioManager>().Play("IntercomMenuClose");
         }
     }
-
 }

@@ -4,20 +4,44 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public Animator animator;
+
+    private bool facingRight = true;
+
     public Rigidbody rigidbody;
-    public float playerSpeed = 5;
+    public float playerSpeed = 10;
 
     float horizontal;
     float vertical;
-
-    void Update()
+    public void Update()
     {
         horizontal = Input.GetAxis("Horizontal");
-    }
+        animator.SetFloat("Speed", Mathf.Abs(horizontal));
 
-    private void FixedUpdate()
+        if (horizontal > 0 && facingRight)
+        {
+            // ... flip the player.
+            Flip();
+        }
+        // Otherwise if the input is moving the player left and the player is facing right...
+        else if (horizontal < 0 && !facingRight)
+        {
+            // ... flip the player.
+            Flip();
+        }
+    }
+    public void FixedUpdate()
     {
         Vector3 movement = new Vector3(horizontal, 0, vertical);
-        rigidbody.MovePosition(rigidbody.position + movement * Time.deltaTime * playerSpeed);
+        rigidbody.MovePosition(rigidbody.position + movement * Time.deltaTime);
+    }
+   
+    private void Flip()
+    {
+        facingRight = !facingRight;
+
+        Vector3 theScale = transform.localScale; ;
+        theScale.x *= -1;
+        transform.localScale = theScale;
     }
 }

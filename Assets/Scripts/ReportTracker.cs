@@ -112,6 +112,7 @@ public class ReportTracker : MonoBehaviour
     public void CloseReport()
     {
         reportSheet.SetActive(false);
+        FindObjectOfType<AudioManager>().Play("ReportMenuClose");
     }
 
     public void CloseTutorial()
