@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
 
     private bool facingRight = true;
+    public AudioSource footstep;
 
     public Rigidbody rigidbody;
     public float playerSpeed = 10;
@@ -33,7 +34,7 @@ public class PlayerController : MonoBehaviour
     public void FixedUpdate()
     {
         Vector3 movement = new Vector3(horizontal, 0, vertical);
-        rigidbody.MovePosition(rigidbody.position + movement * Time.deltaTime);
+        rigidbody.MovePosition(rigidbody.position + movement * Time.deltaTime * playerSpeed);
     }
    
     private void Flip()
@@ -43,5 +44,10 @@ public class PlayerController : MonoBehaviour
         Vector3 theScale = transform.localScale; ;
         theScale.x *= -1;
         transform.localScale = theScale;
+    }
+
+    private void Footstep()
+    {
+        footstep.Play();
     }
 }

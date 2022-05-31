@@ -64,7 +64,7 @@ public class IntercomTracker2 : MonoBehaviour
         if (DayTracker.currentDay == 2)
         {
             choiceTitle.GetComponent<Text>().text = "STOWAWAY";
-            choiceText.GetComponent<Text>().text = "Sir, A stowaway has been found hiding in the supply carraige. He claims to be the brother of one of the staff members aboard. The passangers are divided about what to do with him, but the choice is yours. The supply carraige doesn't have the same protection as the personnel carriages, so theres no knowing if this stowaway has contracted any number of the strange illnesses that plauge the frontier. What are your orders?";
+            choiceText.GetComponent<Text>().text = "Sir, A stowaway has been found hiding in the supply carraige. He claims to be the brother of one of the staff members aboard. The passangers are divided about what to do with him, but the choice is yours. The supply carraige doesn't have the same protection as the personnel carriages, so theres no knowing if this stowaway has contracted any number of the strange illnesses that plague the frontier. What are your orders?";
             option1Text.GetComponent<Text>().text = "Confine in a Personnel Carraige";
             option2Text.GetComponent<Text>().text = "Eject from the Train";
             firstChoiceMade = true;

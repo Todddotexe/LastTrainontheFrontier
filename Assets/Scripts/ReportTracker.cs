@@ -118,5 +118,6 @@ public class ReportTracker : MonoBehaviour
     public void CloseTutorial()
     {
         tutorial.SetActive(false);
+        DayTracker.bedButton.SetActive(true);
     }
 }
